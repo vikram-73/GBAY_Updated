@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBAY</title>
+    <link rel="shortcut icon" type="x-icon" href="https://cdn.icon-icons.com/icons2/868/PNG/512/magnifier_icon-icons.com_67993.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .que {
+            font-size: 30px;
+            font-family: roboto;
+            background-image: linear-gradient(to right, red, purple, blue);
+            /* Adjust colors as needed */
+            -webkit-background-clip: text;
+            /* Apply the gradient as text fill */
+            background-clip: text;
+            color: transparent;
+            /* Hide original text */
+        }
+
+        .radio-buttons {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+        }
+
+        input[type="radio"]:hover {
+            cursor: pointer;
+        }
+
+        .bac {
+            margin-top: 0px;
+            background-image: url('https://i.pinimg.com/736x/00/80/ab/0080ab5a9c97e968978e5ac7a9f712b0.jpg');
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .container {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            height: 150px;
+            width: 200px;
+        }
+
+        .main-content {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6zCIY9nJUgicH2DWSztgh-j8s8FO-vBMGQw&s');
+            background-size: cover;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 0px;
+            background-color: #fff;
+            width: 750px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .but_reset {
+            align-self: center;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .dis {
+            display: none;
+        }
+
+        .mar {
+            display: flex;
+            flex-direction: row;
+            margin: 40px;
+        }
+
+        .button {
+
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+
+        label {
+            color: yellow;
+            font-size: 20px;
+            font-family: Bree Serif;
+        }
+
+        .button:hover {
+            background-color: #11d181;
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="bac">
+
+    <div class="container">
+        <div class="header">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bf0a7d6b-f047-40fe-b6ee-adb67dac743b/dh2zi63-64057583-1745-486f-948c-7df376f2ab8d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmMGE3ZDZiLWYwNDctNDBmZS1iNmVlLWFkYjY3ZGFjNzQzYlwvZGgyemk2My02NDA1NzU4My0xNzQ1LTQ4NmYtOTQ4Yy03ZGYzNzZmMmFiOGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3LezIOp80cg0LMhHYJ0XzStblA6OcWEKMVMivGvs9nw" alt="GBAY Logo">
+        </div>
+        <div class="main-content">
+            <label class="que" for="query">Enter your Query</label>
+            <input type="search" id="query" placeholder="Type your query here...">
+            <div class="button-container">
+                <button class="button" id="micButton">Voice Search</button>
+                <button class="button" id="searchButton">Search</button>
+            </div>
+        </div>
+        <div class="radio-buttons">
+            <div class="mar">
+                <input type="radio" id="google" name="searchEngine" value="google">
+                <label for="google">Google</label>
+            </div>
+
+            <div class="mar">
+                <input type="radio" id="brave" name="searchEngine" value="brave">
+                <label for="brave">Brave</label>
+            </div>
+
+            <div class="mar">
+                <input type="radio" id="shop" name="searchEngine" value="shop">
+                <label for="shop">Acquire</label>
+            </div>
+
+            <div class="mar">
+                <input type="radio" id="youtube" name="searchEngine" value="youtube">
+                <label for="youtube">Youtube</label>
+            </div>
+
+            <div class="dis">
+                <input type="radio" id="comparator" name="searchEngine" value="comparator">
+                <label for="comparator">Comparator</label>
+            </div>
+
+        </div>
+        <button class="but_reset button" id="resetButton">Reset</button>
+    </div>
+
+    <script>
+        function uncheckRadioButtons() {
+            var searchEngines = document.querySelectorAll('input[name="searchEngine"]');
+            searchEngines.forEach(function(engine) {
+                engine.checked = false;
+            });
+        }
+
+        function Reset() {
+            document.getElementById("query").value = "";
+            uncheckRadioButtons();
+        }
+
+        let resetbut = document.getElementById("resetButton");
+        resetbut.addEventListener('click', function() {
+            Reset();
+        });
+
+
+
+        document.getElementById("resetButton").addEventListener("click", function() {
+            document.getElementById("query").value = "";
+            var searchEngines = document.querySelectorAll('input[name="searchEngine"]');
+            searchEngines.forEach(function(engine) {
+                engine.checked = false;
+            });
+        });
+
+        document.getElementById("query").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent form submission
+                search(); // Trigger search function
+            } else if (event.ctrlKey && event.key === "m") {
+                event.preventDefault(); // Prevent default paste behavior
+                voiceSearch(); // Trigger voice search function
+            } else if (event.ctrlKey && event.key === "c") {
+                event.preventDefault(); // Prevent default paste behavior
+                Reset(); // Trigger voice search function
+
+            }
+        });
+
+        function search() {
+
+            var query = document.getElementById("query").value;
+            var searchEngine = document.querySelector('input[name="searchEngine"]:checked');
+            if (query.trim() !== "") {
+                var searchUrl = "";
+
+                if (searchEngine) {
+                    switch (searchEngine.value) {
+                        case "google":
+                            searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(query);
+                            break;
+                        case "brave":
+                            searchUrl = "https://search.brave.com/search?q=" + encodeURIComponent(query);
+                            break;
+                        case "shop":
+                            searchUrl = "https://pricee.com/?q=%20" + encodeURIComponent(query) + "&ref=nb_sb_noss";
+                            break;
+                        case "youtube":
+                            searchUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+                            break;
+                        case "comparator":
+                            searchUrl = "https://www.91mobiles.com/compare-mobile-phones.html";
+                            break;
+
+                    }
+                    if (searchUrl !== "") {
+                        window.open(searchUrl, "_blank");
+                    }
+                } else {
+                    let x = choose(query.toLowerCase());
+                    console.log(x);
+                    window.open(x, "_blank");
+                }
+
+
+            } else {
+                alert("Please enter a query.");
+            }
+        }
+
+        function choose(query) {
+            var searchUrl;
+            let brav = ['ibomma', 'i bomma', 'bomma', 'movie', 'movierulz', 'rulz', 'tamilrockers', 'soap2day', 'piracy', 'tamil rockers', 'ads', 'noads', 'adds', 'addvertisements'];
+            let yut = ['youtube', 'song', 'songs', 'vlogs', 'logs', 'vlog', 'vlogging', 'blogs', 'vloging', 'vlogger', 'blogger', 'trailer', 'teaser', 'glimpse', 'tube', 'video', 'videos', 'channel', 'gaming', 'subscribe', 'reviews', 'review', 'unbox', 'unboxing', 'yt', 'class', 'classes', 'tutorial', 'tutorials'];
+            let shop = ['price', 'under', 'buy', 'purchase', 'laptops', 'laptop', 'accesories', 'emi', 'phone', 'phones'];
+            let comp = ['compare', 'comparator', 'comparision'];
+            let blocks = query.split(" ");
+            console.log(blocks);
+            /*blocks.forEach(function(element) {
+            if (brav.includes(element)) {
+                searchUrl = "https://search.brave.com/search?q=" + encodeURIComponent(query);
+                return searchUrl;
+                
+            }
+            });*/
+
+
+            /*blocks.forEach(function(element) {
+             if(yut.includes(element)){
+                searchUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+                return searchUrl;
+                 
+             }
+            });*/
+            for (var j = 0; j < blocks.length; j++) {
+                var elemen = blocks[j];
+                if (yut.indexOf(elemen) !== -1) {
+                    searchUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+                    return searchUrl;
+
+
+                }
+
+            }
+
+            /*blocks.forEach(function(element) {
+            if(amaz.includes(element)){
+                searchUrl = "https://www.amazon.in/s?k=" + encodeURIComponent(query) + "&ref=nb_sb_noss";
+                return searchUrl;
+                
+            }
+            });*/
+            for (var k = 0; k < blocks.length; k++) {
+                var eleme = blocks[k];
+                if (shop.indexOf(eleme) !== -1) {
+                    searchUrl = "https://pricee.com/?q=%20" + encodeURIComponent(query) + "&ref=nb_sb_noss";
+                    return searchUrl;
+
+
+                }
+
+            }
+            for (var k = 0; k < blocks.length; k++) {
+                var eleme = blocks[k];
+                if (comp.indexOf(eleme) !== -1) {
+                    searchUrl = "https://www.91mobiles.com/compare-mobile-phones.html";
+                    return searchUrl;
+
+
+                }
+
+            }
+            for (var i = 0; i < blocks.length; i++) {
+                var element = blocks[i];
+                if (brav.indexOf(element) !== -1) {
+                    searchUrl = "https://search.brave.com/search?q=" + encodeURIComponent(query);
+                    return searchUrl;
+
+                }
+
+            }
+            searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(query);
+            return searchUrl;
+
+
+        }
+
+        function voiceSearch() {
+            var recognition = new webkitSpeechRecognition() || SpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                var result = event.results[0][0].transcript;
+                document.getElementById("query").value = result;
+                search(); // Call search function after recognizing the query
+            };
+        }
+
+        document.getElementById("micButton").addEventListener("click", function() {
+            voiceSearch();
+        });
+
+        document.getElementById("searchButton").addEventListener("click", function() {
+            search();
+        });
+    </script>
+</body>
+
+</html>
